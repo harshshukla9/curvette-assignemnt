@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:8080",
+  baseURL: "https://curvette-assignemnt.onrender.com",
   withCredentials: true,
   headers: {
     "Content-Type": "application/json",
@@ -32,7 +32,7 @@ api.interceptors.response.use((config) => {
       originalRequest._isRetry = true;
 
       try {
-          await axios.get(`http://localhost:8080/api/v1/auth/refresh`, {
+          await axios.get(`https://curvette-assignemnt.onrender.com/api/v1/auth/refresh`, {
               withCredentials : true
           });
 
